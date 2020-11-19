@@ -129,7 +129,7 @@ $timestamp = strtotime($hsl['tgl_pengumuman']);
 ?>
 					<center><h3>Daftar Penerima <?php echo strtoupper($prog); ?> Tahun <?php echo $thn; ?> Tahap <?php echo $thp; ?></h3></center>
 					<table class="table table-bordered">
-						<!-- <th>No.</th> -->
+						<th>No.</th>
 						<th>Nama</th>
 						<th>Kelas</th>
 
@@ -140,14 +140,18 @@ $timestamp = strtotime($hsl['tgl_pengumuman']);
 							if(mysqli_num_rows($hasil) > 0)
 							{
 								// $data = mysqli_fetch_array($hasil);
+								$x=1;
 								while ($row = mysqli_fetch_row($hasil))
-								{							
+								{	
+															
 								
 ?>									<tr>
+										<td><?php echo $x; ?></td>
 										<td><?php echo $row[3];?></td>
 										<td><?php echo $row[2];?></td>
 									</tr>
 <?php
+									$x++;
 								}
 							}
 ?>
@@ -165,7 +169,7 @@ $timestamp = strtotime($hsl['tgl_pengumuman']);
 
 					<center><h3>Daftar Penerima <?php echo strtoupper($prog); ?> Tahun <?php echo $thn; ?></h3></center>
 					<table class="table table-bordered">
-						<!-- <th>No.</th> -->
+						<th>No.</th>
 						<th>Nama</th>
 						<th>Kelas</th>
 
@@ -176,14 +180,17 @@ $timestamp = strtotime($hsl['tgl_pengumuman']);
 							if(mysqli_num_rows($hasil) > 0)
 							{
 								// $data = mysqli_fetch_array($hasil);
+								$x=1;
 								while ($row = mysqli_fetch_row($hasil))
 								{							
 								
 ?>									<tr>
+										<td><?php echo $x; ?></td>
 										<td><?php echo $row[3];?></td>
 										<td><?php echo $row[2];?></td>
 									</tr>
 <?php
+									$x++;
 								}
 							}
 ?>
